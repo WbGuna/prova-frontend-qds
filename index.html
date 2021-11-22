@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="row mb-4">
+            <h1>Formulário de cadastro</h1>
+        </div>
+        <form id="form" name="cadastro">
+            <div class="row">
+                <div class="col-12 col-sm-6">
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Nome/Razão social</label>
+                        <input type="text" class="form-control" id="name" required/>
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">E-mail:</label>
+                        <input type="email" class="form-control" id="email" required/>
+                        <span class="msg-email  msg-error invalid-feedback " style="display: none;">campo inválido</span>
+                        <span class="msg-email ok msg-success valid-feedback" style="display: none;">ok</span>
+                    </div>
+
+                    <div class="mb-3">
+                        <label  class="form-label">País</label>
+                        <select class="form-select" id="pais" aria-label="Default select example">
+                            <option selected value="">Selecione</option>
+                            <option value="BR">Brasil</option>
+                            <option value="AR">Argentina</option>
+                            <option value="CO">Colombia</option>
+                          </select>
+                    </div>
+                    <div class="mb-3">
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" value="casado" name="estado_civil" id="casado">
+                            <label class="form-check-label" for="casado">
+                                Casado
+                            </label>
+                          </div>
+                          <div class="form-check">
+                            <input class="form-check-input" type="radio" value="solteiro" name="estado_civil" id="solteiro">
+                            <label class="form-check-label" for="solteiro">
+                                Solteiro
+                            </label>
+                          </div>
+                    </div>
+                    <div class="mb-3">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="check1" id="flexCheckDefault">
+                            <label class="form-check-label" for="flexCheckDefault">
+                              Default checkbox
+                            </label>
+                          </div>
+                          <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="check2" id="flexCheckChecked">
+                            <label class="form-check-label" for="flexCheckChecked">
+                              Checked checkbox
+                            </label>
+                          </div>
+                    </div>
+                    
+                </div>
+                <div class="col-12 col-sm-3">
+                    <div class="mb-3">
+                        <label for="cpf" class="form-label">CPF:</label>
+                        <input type="text" class="form-control" id="cpf" required/>
+                        <span class="msg-cpf  msg-error invalid-feedback" style="display: none;">CPF inválido</span>
+                        <span class="msg-cpf  msg-success valid-feedback" style="display: none;">ok</span>
+                    </div>
+                    <div class="mb-3">
+                        <label for="cnpj" class="form-label">CNPJ:</label>
+                        <input type="text" class="form-control" id="cnpj" required/>
+                        <span class="msg-cnpj  msg-error invalid-feedback" style="display: none;">CNPJ inválido</span>
+                        <span class="msg-cnpj  msg-success valid-feedback" style="display: none;">ok</span>
+                    </div>
+                    <div class="mb-3">
+                        <label for="password" class="form-label">Senha:</label>
+                        <input type="password" class="form-control" id="password" required/>
+                    </div>
+                    <div class="mb-3">
+                        <label for="fone" class="form-label">Telefone:</label>
+                        <input type="text" class="form-control" id="fone" required/>
+                        <span class="msg-fone  msg-error invalid-feedback" style="display: none;">Telefone inválido</span>
+                        <span class="msg-fone  msg-success valid-feedback" style="display: none;">ok</span>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-3">
+                    <div class="mb-3">
+                        <label for="data" class="form-label">Data de nascimento:</label>
+                        <input type="text" class="form-control" id="data" required/>
+                        <span class="msg-data  msg-error invalid-feedback" style="display: none;">Data inválida</span>
+                        <span class="msg-data  msg-success valid-feedback" style="display: none;">ok</span>
+                    </div>
+                    <div class="mb-3">
+                        <label for="cep" class="form-label">CEP:</label>
+                        <input type="text" class="form-control" id="cep" required/>
+                        <span class="msg-cep  msg-error invalid-feedback" style="display: none;">CEP inválido</span>
+                        <span class="msg-cep  msg-success valid-feedback" style="display: none;">ok</span>
+                    </div>
+                    <div class="mb-3">
+                        <label for="celular" class="form-label">Celular:</label>
+                        <input type="text" class="form-control" id="celular" required/>
+                        <span class="msg-celular  msg-error invalid-feedback" style="display: none;">Celular inválido</span>
+                        <span class="msg-celular  msg-success valid-feedback" style="display: none;">ok</span>
+                    </div>
+                </div>
+            </div>
+            <input type="hidden" value="cadastro_facebook" />
+            <div class="row mt-5">
+                <div class="col-12">
+                    <div class="d-grid gap-2 d-sm-block">
+                        <button type="submit" class="btn btn-success btn-lg">Enviar</button>
+                        <button type="reset" class="btn btn-success btn-lg">Excluir</button>
+                    </div>
+                    
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <script src="./js/app.js"></script>
+</body>
+
+</html>
