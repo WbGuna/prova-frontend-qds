@@ -94,36 +94,36 @@ iptRg.onblur = function() {
 }
 
 // Valida Senha
-let iptNum = document.getElementById("num");
-iptNum.onblur = function() {
-    let regexNum = /^[0-9]*$/;
-    let msgNumError = document.querySelector(".msg-num.msg-error");
-    let msgNumOK = document.querySelector(".msg-num.msg-success");
+let iptSenha = document.getElementById("senha");
+iptSenha.onblur = function() {
+    let regexSenha = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[$*&@#])[0-9a-zA-Z$*&@#]{8,}$/;
+    let msgSenhaError = document.querySelector(".msg-senha.msg-error");
+    let msgSenhaOK = document.querySelector(".msg-senha.msg-success");
 
-    if (regexNum.test(iptNum.value)) {
-        msgNumError.style.display = "none";
-        msgNumOK.style.display = "block";
+    if (regexSenha.test(iptSenha.value)) {
+        msgSenhaError.style.display = "none";
+        msgSenhaOK.style.display = "block";
     } else {
-        msgNumOK.style.display = "none";
-        msgNumError.style.display = "block";
+        msgSenhaOK.style.display = "none";
+        msgSenhaError.style.display = "block";
     }
 }
 
-// Valida Confirma senha
-let iptNum = document.getElementById("num");
-iptNum.onblur = function() {
-    let regexNum = /^[0-7]*$/;
-    let msgNumError = document.querySelector(".msg-num.msg-error");
-    let msgNumOK = document.querySelector(".msg-num.msg-success");
+// // Valida Confirma senha
+// let iptNum = document.getElementById("num");
+// iptNum.onblur = function() {
+//     let regexNum = /^[0-7]*$/;
+//     let msgNumError = document.querySelector(".msg-num.msg-error");
+//     let msgNumOK = document.querySelector(".msg-num.msg-success");
 
-    if (regexNum.test(iptNum.value)) {
-        msgNumError.style.display = "none";
-        msgNumOK.style.display = "block";
-    } else {
-        msgNumOK.style.display = "none";
-        msgNumError.style.display = "block";
-    }
-}
+//     if (regexNum.test(iptNum.value)) {
+//         msgNumError.style.display = "none";
+//         msgNumOK.style.display = "block";
+//     } else {
+//         msgNumOK.style.display = "none";
+//         msgNumError.style.display = "block";
+//     }
+// }
 
 
 
