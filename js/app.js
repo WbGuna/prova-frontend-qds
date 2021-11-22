@@ -94,10 +94,10 @@ iptRg.onblur = function() {
 }
 
 // Valida Senha
-let iptSenha = document.getElementById("senha");
-iptSenha.onblur = function() {
-    let regexSenha = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[$*&@#])[0-9a-zA-Z$*&@#]{8,}$/;
-    let msgSenhaError = document.querySelector(".msg-senha.msg-error");
+let iptPassword = document.getElementById("password");
+iptPassword.onblur = function() {
+    let regexPassword = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[$*&@#])[0-9a-zA-Z$*&@#]{8,}$/;
+    let msgPasswordError = document.querySelector(".msg-senha.msg-error");
     let msgSenhaOK = document.querySelector(".msg-senha.msg-success");
 
     if (regexSenha.test(iptSenha.value)) {
@@ -109,21 +109,6 @@ iptSenha.onblur = function() {
     }
 }
 
-// // Valida Confirma senha
-// let iptNum = document.getElementById("num");
-// iptNum.onblur = function() {
-//     let regexNum = /^[0-7]*$/;
-//     let msgNumError = document.querySelector(".msg-num.msg-error");
-//     let msgNumOK = document.querySelector(".msg-num.msg-success");
-
-//     if (regexNum.test(iptNum.value)) {
-//         msgNumError.style.display = "none";
-//         msgNumOK.style.display = "block";
-//     } else {
-//         msgNumOK.style.display = "none";
-//         msgNumError.style.display = "block";
-//     }
-// }
 
 
 
