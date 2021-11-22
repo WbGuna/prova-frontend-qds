@@ -45,39 +45,6 @@ iptCpf.onblur = function() {
     }
 }
 
-// Valida CNPJ
-let iptCnpj = document.getElementById("cnpj");
-iptCnpj.onblur = function() {
-    let regexCnpj = /^\d{2}\.\d{3}\.\d{3}\/\d{4}\-\d{2}$/;
-    let msgCnpjError = document.querySelector(".msg-cnpj.msg-error");
-    let msgCnpjOK = document.querySelector(".msg-cnpj.msg-success");
-
-    if (regexCnpj.test(iptCnpj.value)) {
-        msgCnpjError.style.display = "none";
-        msgCnpjOK.style.display = "block";
-    } else {
-        msgCnpjOK.style.display = "none";
-        msgCnpjError.style.display = "block";
-    }
-}
-
-// Valida data
-let iptData = document.getElementById("data");
-iptData.onblur = function() {
-    let regexData = /^(((0?[1-9]|[12]\d|3[01])[\.\-\/](0?[13578]|10|12)[\.\-\/](19[7-9]\d|2[0-2][0-9]\d))|((0?[1-9]|[12]\d|30)[\.\-\/] (0?[469]|11)[\.\-\/](19[7-9]\d|2[0-2][0-9]\d))|((0?[1-9]|1\d|2[0-8])[\.\-\/]0?2[\.\-\/](19[7-9]\d|2[0-2][0-9]\d))|(29[\.\-\/]0?2[\.\-\/]((19[7-9]\d|2[0-2][0-9]\d)?(0[48]|[2468][048]|[13579][26])|((16|[2468][048]|[3579][26])00)|00)))$/;
-    let msgDataError = document.querySelector(".msg-data.msg-error");
-    let msgDataOK = document.querySelector(".msg-data.msg-success");
-
-    if (regexData.test(iptData.value)) {
-        msgDataError.style.display = "none";
-        msgDataOK.style.display = "block";
-    } else {
-        msgDataOK.style.display = "none";
-        msgDataError.style.display = "block";
-    }
-}
-
-
 // Valida CEP
 let iptCep = document.getElementById("cep");
 iptCep.onblur = function() {
@@ -94,36 +61,69 @@ iptCep.onblur = function() {
     }
 }
 
+// Valida Nº
+let iptNum = document.getElementById("num");
+iptNum.onblur = function() {
+    let regexNum = /^[0-9]*$/;
+    let msgNumError = document.querySelector(".msg-num.msg-error");
+    let msgNumOK = document.querySelector(".msg-num.msg-success");
 
-// Valida Celular
-let iptCelular = document.getElementById("celular");
-iptCelular.onblur = function() {
-    let regexCelular = /^(?:(?:\+|00)?(55)\s?)?(?:\(?([1-9][0-9])\)?\s?)?(?:((?:9\d|[2-9])\d{3})\-?(\d{4}))$/;
-    let msgCelularError = document.querySelector(".msg-celular.msg-error");
-    let msgCelularOK = document.querySelector(".msg-celular.msg-success");
-
-    if (regexCelular.test(iptCelular.value)) {
-        msgCelularError.style.display = "none";
-        msgCelularOK.style.display = "block";
+    if (regexNum.test(iptNum.value)) {
+        msgNumError.style.display = "none";
+        msgNumOK.style.display = "block";
     } else {
-        msgCelularOK.style.display = "none";
-        msgCelularError.style.display = "block";
+        msgNumOK.style.display = "none";
+        msgNumError.style.display = "block";
     }
 }
 
-// Valida Telefone
-let iptFone = document.getElementById("fone");
-iptFone.onblur = function() {
-    let regexFone = /^(?:(?:\+|00)?(55)\s?)?(?:\(?([1-9][0-9])\)?\s?)?(?:((?:9\d|[2-9])\d{3})\-?(\d{4}))$/;
-    let msgFoneError = document.querySelector(".msg-fone.msg-error");
-    let msgFoneOK = document.querySelector(".msg-fone.msg-success");
+// Valida RG
+let iptRg = document.getElementById("rg");
+iptRg.onblur = function() {
+    let regexRg = /^[0-9]{2}\.[0-9]{3}\.[0-9]{3}\-[0-9]{1}$/;
+    let msgRgError = document.querySelector(".msg-rg.msg-error");
+    let msgRgOK = document.querySelector(".msg-rg.msg-success");
 
-    if (regexFone.test(iptFone.value)) {
-        msgFoneError.style.display = "none";
-        msgFoneOK.style.display = "block";
+    if (regexRg.test(iptRg.value)) {
+        msgRgError.style.display = "none";
+        msgRgOK.style.display = "block";
     } else {
-        msgFoneOK.style.display = "none";
-        msgFoneError.style.display = "block";
+        msgRgOK.style.display = "none";
+        msgRgError.style.display = "block";
     }
 }
+
+// Valida Senha
+let iptNum = document.getElementById("num");
+iptNum.onblur = function() {
+    let regexNum = /^[0-9]*$/;
+    let msgNumError = document.querySelector(".msg-num.msg-error");
+    let msgNumOK = document.querySelector(".msg-num.msg-success");
+
+    if (regexNum.test(iptNum.value)) {
+        msgNumError.style.display = "none";
+        msgNumOK.style.display = "block";
+    } else {
+        msgNumOK.style.display = "none";
+        msgNumError.style.display = "block";
+    }
+}
+
+// Valida Confirma senha
+let iptNum = document.getElementById("num");
+iptNum.onblur = function() {
+    let regexNum = /^[0-7]*$/;
+    let msgNumError = document.querySelector(".msg-num.msg-error");
+    let msgNumOK = document.querySelector(".msg-num.msg-success");
+
+    if (regexNum.test(iptNum.value)) {
+        msgNumError.style.display = "none";
+        msgNumOK.style.display = "block";
+    } else {
+        msgNumOK.style.display = "none";
+        msgNumError.style.display = "block";
+    }
+}
+
+
 
