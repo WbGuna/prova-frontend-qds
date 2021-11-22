@@ -94,10 +94,10 @@ iptRg.onblur = function() {
 }
 
 // Valida Senha
-let iptPassword = document.getElementById("password");
-iptPassword.onblur = function() {
-    let regexPassword = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[$*&@#])[0-9a-zA-Z$*&@#]{8,}$/;
-    let msgPasswordError = document.querySelector(".msg-senha.msg-error");
+let iptSenha = document.getElementById("senha");
+iptSenha.onblur = function() {
+    let regexSenha = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[$*&@#])[0-9a-zA-Z$*&@#]{8,}$/;
+    let msgSenhaError = document.querySelector(".msg-senha.msg-error");
     let msgSenhaOK = document.querySelector(".msg-senha.msg-success");
 
     if (regexSenha.test(iptSenha.value)) {
