@@ -4,33 +4,8 @@ selectPais = document.getElementById("pais");
 
 form.onsubmit = function(event) {
     event.preventDefault();
-
-    //CAPTURAR UMA OPTION SELECIONADA
-    
-    let index = selectPais.selectedIndex;
-    
-    console.log(selectPais.options[index].value)
-
-    let estado_civil = document.querySelector('input[name="estado_civil"]:checked')
-    console.log(estado_civil.value)
-
-    let check1 = document.getElementById("flexCheckDefault");
-    console.log(check1.checked)
-
-    let message = document.getElementById("exampleFormControlTextarea1");
-    console.log(message.value)
 }
 
-
-// iptName.onchange = function(event) {
-//     console.log("mudou")
-// }
-
-selectPais.onchange = function(event) {
-    var index = selectPais.selectedIndex;
-    var option = selectPais.options[index].value;
-    console.log(option)
-}
 
 iptName.onblur = function() {
     console.log("desfocou")
